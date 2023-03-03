@@ -1,9 +1,21 @@
+<script>
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
+
+export default {
+  components: {
+    Navbar,
+    Footer,
+  },
+};
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div class="flex flex-col min-h-screen justify-between">
+    <Navbar />
+    <router-view />
+    <Footer />
+  </div>
 </template>
 
 <style>
@@ -13,6 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #1f232a;
 }
 
 nav {
