@@ -9,9 +9,10 @@ import {
   faSquare,
   faGrip,
   faMagnifyingGlass,
+  faServer,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSquare, faGrip, faMagnifyingGlass);
+library.add(faSquare, faGrip, faMagnifyingGlass, faServer);
 
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
