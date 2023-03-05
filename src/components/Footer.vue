@@ -5,7 +5,10 @@ export default {
 </script>
 
 <template>
-  <div style="background: #16191f" class="p-16 flex justify-between mt-36">
+  <div
+    style="background: #16191f; z-index: 30"
+    class="p-16 flex justify-between mt-36"
+  >
     <div class="h-100 items-center">
       <span style="color: #929292">
         © 2021 MoovieTime. All rights reserved.
