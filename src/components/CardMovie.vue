@@ -2,11 +2,16 @@
 export default {
   name: "card-movie",
   props: ["movie"],
+  methods: {
+    onViewMovie(id) {
+      this.$router.push(`/movie/${id}`);
+    },
+  },
 };
 </script>
 
 <template>
-  <div class="main_container">
+  <div class="main_container_card">
     <img :src="movie.image" class="image" />
     <div class="rating px-4 py-1">
       <span class="font-bold text-white">{{ movie.rating }}</span>
@@ -33,6 +38,7 @@ export default {
         </div>
         <button
           class="bg-rose-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-3/6"
+          @click="onViewMovie(movie.id)"
         >
           VIEW
         </button>
@@ -42,7 +48,7 @@ export default {
 </template>
 
 <style scoped>
-.main_container {
+.main_container_card {
   position: relative;
 }
 .image {
@@ -71,11 +77,11 @@ export default {
   height: 100%;
   width: 100%;
 }
-.main_container:hover .image {
+.main_container_card:hover .image {
   opacity: 0.3;
 }
 
-.main_container:hover .preview {
+.main_container_card:hover .preview {
   opacity: 1;
 }
 </style>
